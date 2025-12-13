@@ -174,8 +174,6 @@ a{
 }
 
 
-
-
 /* Social-Proof Section */
 .companies-section{
    display:flex;
@@ -204,6 +202,8 @@ a{
 .about-section{
   border:2px solid var(--black-color);
   background-color: var(--secondary-color);
+  border-radius: 20px;
+
 }
 
 .about-img{
@@ -217,15 +217,15 @@ a{
   flex-direction: column;
   gap:1.5em;
   margin-top:1.5em;
-
+  padding:2em;
 }
 
 .about-btn{
   background-color: var(--black-color);
   color:var(--primary-color);
-  padding:1em;
-  width:200px;
-  border-radius: 6px;
+  padding:1em 1.5em;
+  width:226px;
+  border-radius: 40px;
   border:none;
 }
 
