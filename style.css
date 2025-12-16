@@ -68,7 +68,9 @@ li{
     list-style:none;
 
 }
-
+a{
+  color: var(--primary-color);
+}
 li a{
     text-decoration: none;
 }
@@ -215,16 +217,18 @@ a{
 .about-text-container{
   display:flex;
   flex-direction: column;
-  gap:1.5em;
+  gap:2em;
   margin-top:1.5em;
-  padding:2em;
+  padding:1.5em;
+  margin:0;
 }
 
 .about-btn{
   background-color: var(--black-color);
   color:var(--primary-color);
-  padding:1em 1.5em;
-  width:226px;
+  padding:1em;
+  width:216px;
+  height:56px;
   border-radius: 40px;
   border:none;
 }
@@ -232,6 +236,49 @@ a{
 button:hover{
   opacity:0.8;
 }
+
+
+/* Services Section */
+
+.services-section{
+  padding:2.5rem 2rem;
+  border:2px solid yellowgreen;
+  display:flex;
+  flex-direction: column;
+  gap:2em;
+  margin-top:1.5em;
+  padding:1.5em;
+  margin:0;
+}
+
+.service-subtitle_heading{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1rem;
+}
+
+.services-subtitle-text{
+  font-size: 12px;
+  line-height: 120%;
+ 
+}
+
+.services-heading-text{
+  font-size: var(--heading-2-mobile);
+  letter-spacing:-0.25px;
+  line-height: 120%;
+  text-align: center;
+  text-transform:capitalize;
+  
+}
+
+.services-body-text{
+   
+  
+}
+
+
 
 
 
