@@ -446,9 +446,17 @@ footer{
 @media screen and (min-width: 1024px) {
   body {
     background-color: #63c971;
-    color: #fff;
+   
   }
 
+  .hero-section{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+}
   ul{
     display:block;
   }
