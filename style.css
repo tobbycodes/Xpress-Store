@@ -87,14 +87,13 @@ li{
 }
 a{
   color: var(--black-color);
+  
 }
+
 li a{
     text-decoration: none;
 }
 
-a{
-    text-decoration: none;
-}
 
 .nav-link:hover{
  opacity:.7;
@@ -144,9 +143,9 @@ a{
   z-index:4;
 }
 
-.CTA-Btn{
+.CTA-btn{
   background-color: var(--black-color);
-  color:var(--primary-color);
+  color:var(--primary-color) !important;
   font-size:1.125rem;
   font-weight: 500;
   letter-spacing:2%;
@@ -155,9 +154,10 @@ a{
   z-index:2;
 }
 
+
+
 .hero-img{
   width:47vw;
-
   height: 90%;
   object-fit: cover;
   object-fit:cover;
@@ -258,15 +258,6 @@ a{
   line-height: 150%;
 }
 
-.CTA-btn{
-  background-color: var(--black-color);
-  color:var(--primary-color);
-  padding:1em;
-  width:216px;
-  height:56px;
-  border-radius: 40px;
-  border:none;
-}
 
 button:hover{
   opacity:0.8;
