@@ -28,7 +28,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #FFFDFA;   
+    background-color: var(--secondary-color);   
     color: #2B2B23;
     font-family: "Poppins", sans-serif;
     width:100vw;
