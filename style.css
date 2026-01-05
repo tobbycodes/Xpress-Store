@@ -546,7 +546,12 @@ footer{
 
 
 
+/* About Page Styling */
 
+.about-page-hero{
+  background-color: var(--black-color);
+  color:var(--primary-color);
+}
 /* Social-Proof Section 
 .companies-section{
    display:flex;
