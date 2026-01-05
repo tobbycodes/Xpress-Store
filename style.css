@@ -90,6 +90,11 @@ a{
   
 }
 
+.CTA-btn a{
+  color:white !important;
+  text-decoration: none;
+}
+
 li a{
     text-decoration: none;
 }
