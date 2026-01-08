@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS PAGES/contact-styles.css">
     <title>Xpress Website Service-Page</title>
 </head>
 <body>
@@ -22,22 +22,25 @@
     </header>
 
     <main>
-      <section class="hero-section">
+      <section class="contact-section">
+        
         <span><i class="home-icon"></i>Home/<span>Contact</span></span>
-        <img class="about-img logo-img" src="Xpress Images/Contact/Contact-Hero-Image.png" alt="This is the logo that represent xpress services,provides the best products for our clients">
-        <h1>Celebrate life with unique souvenirs</h1>
-        <form>
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Jane Doe" required>
-          
-          <label for="number">Phone Number</label>
-          <input type="number" id="number" placeholder="+234 1234" required>
+        <div class="contact-container">
+          <img class="contact-img" src="Xpress Images/Contact/Contact-Hero-Image.png" alt="This is the logo that represent xpress services,provides the best products for our clients">
+          <form>
+            <h1>Get In Contact With Us</h1>
+            <label for="name">Name</label>
+            <input type="text" class="name-input" id="name" placeholder="Jane Doe" required>
+            
+            <label for="number">Phone Number</label>
+            <input type="text" id="number" class="number-input" placeholder="+234 1234" required>
 
-          <label for="number">Leave Your Request</label>
-          <textarea></textarea>
-        </form>
-        <p>From elegant wedding souvenirs to heartfelt birthday gifts.Xpress Store brings your event to life with beautifully packaged, customized items that leave lasting memories.</p>
-        <button>Order via Whatsapp Now</button>
+            <label for="number">Leave Your Request</label>
+            <textarea></textarea>
+            <button class="contact-btn">SUBMIT</button>
+          </form>
+        </div>
+        
       </section>
      
     </main>
