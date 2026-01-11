@@ -43,6 +43,7 @@ header{
     top:0;
     height:90px;
     padding:1.5em;
+    border-bottom: 2px solid var(--black-color);
 }
 
 .header-right{
@@ -51,6 +52,10 @@ header{
 
 .header-btn{
   display:none;
+}
+
+.nav-link:hover{
+  text-decoration: underline;
 }
 
 main{
