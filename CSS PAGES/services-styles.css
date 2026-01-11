@@ -156,20 +156,9 @@ li a{
   
 }
 
-.subtitle_heading{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  gap:.75rem;
-}
 
-.services-subtitle-text{
-  font-size: 12px;
-  line-height: 120%;
- 
-}
 
-.services-heading-text{
+.service-heading-text{
   font-size: var(--heading-2-mobile);
   letter-spacing:-0.25px;
   line-height: 120%;
@@ -178,16 +167,19 @@ li a{
   
 }
 
-.services-list-container{
-   display:grid;
-   grid-template-columns:repeat(2,1fr);
-   gap:2em;
-   border:20px solid peach;
+.service-01,
+.service-02,
+.service-03,
+.service-04,
+.service-05{
+  display:flex;
+  flex-direction: column;
+  gap:2em;
 }
 
 .service-img{
   width:100%;
-  height: 600px;
+  height: 100%;
   object-fit: cover;
   border-radius:10px;
 }
