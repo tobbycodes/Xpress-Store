@@ -297,10 +297,20 @@ color:var(--primary-color)
 
 }
 
-/* .circle-decor{
-  position:absolute;
+.circle-decor-up,
+.circle-decor-down{
   width:100%;
   height:100%;
-  bottom:0;
-  left:0px;
-} */
+}
+
+.circle-decor-up{
+    position:absolute;
+    top:0;
+}
+
+
+.circle-decor-down{
+    position:absolute;
+    top:0;
+}
+
