@@ -60,7 +60,7 @@ main{
   display:flex;
   flex-direction: column;
   width:100%;
-  gap:4rem;
+  gap:7em;
 }
 
 .header-btn{
@@ -122,6 +122,9 @@ li a{
     
 }
 
+.gallery-hero{
+  z-index:5;
+}
 .home-icon{
   width:18px;
   height:18px;
@@ -173,8 +176,11 @@ li a{
   align-items: center;
   gap:2em;
   margin-top:1.5em;
-  padding:1.5em;
+  /* padding:1.5em; */
+  padding:7em;
   margin:0;
+  z-index:10;
+  border:2px solid purple;
 }
 
 
@@ -192,20 +198,38 @@ li a{
   
 }
 
+.circle-decor-up,
+.circle-decor-down{
+  width:100%;
+  height:100%;
+}
 
+.circle-decor-up{
+    position:absolute;
+    top:-21em;
+}
+
+
+.circle-decor-down{
+    position:absolute;
+    top:-20em;
+     
+    
+    
+}
 
 /* Footer Section */
 
 footer{
   position:relative;
   background-color:var(--secondary-color);
-  border:2px solid rgb(18, 36, 136);
   padding:2.5em 2em;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top:1.5em;
+  margin-top:11em;
   margin:0;
   width:100%;
  
@@ -297,20 +321,5 @@ color:var(--primary-color)
 
 }
 
-.circle-decor-up,
-.circle-decor-down{
-  width:100%;
-  height:100%;
-}
 
-.circle-decor-up{
-    position:absolute;
-    top:0;
-}
-
-
-.circle-decor-down{
-    position:absolute;
-    top:0;
-}
 
