@@ -1,7 +1,6 @@
-let navLinks = document.querySelector('.nav-links')
+const navLinks = document.querySelector('.nav-links')
+const headerBtn = document.querySelector('.header-btn')
 
-let headerBtn = document.querySelector('.header-btn')
-
-headerBtn.addEventListener('click',function(){
-    navLinks.style.display = navLinks.style.display === 'none' ? 'flex' : 'none';
+headerBtn.addEventListener('click',() => {
+    navLinks.classList.toggle('active')
 })

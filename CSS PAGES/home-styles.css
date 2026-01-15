@@ -531,6 +531,19 @@ color:var(--primary-color)
   .nav-links {
     display: none;
     flex-direction: column;
+    align-items:center;
+    width:100%;
+    height:auto;
+    padding: 2rem 0;
+    background:wheat;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+  }
+  
+  .nav-links.active{
+    display:flex;
   }
 
   .header-btn{
@@ -546,7 +559,7 @@ color:var(--primary-color)
     position:relative;
     background:var(--secondary-color);
     flex-direction: column;
-   
+   z-index:
 }
 
 .hero-text{
