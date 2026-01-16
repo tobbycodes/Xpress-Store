@@ -44,6 +44,7 @@ header{
     height:90px;
     padding:1.5em;
     border-bottom: 2px solid var(--black-color);
+    z-index:200;
 }
 
 .header-right{
@@ -54,22 +55,42 @@ header{
   display:none;
 }
 
+/* Container for the nav-link(home,about,etc) */
+.nav-links{
+  /* background-color:var(--black-color); */
+  display:flex;
+  gap:2em;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none ;
+  list-style: none;
+  color:var(--black-color);
+}
+
+li{
+  list-style: none;
+}
+
 .nav-link:hover{
   text-decoration: underline;
+  opacity:.7;
+  cursor:pointer;
 }
 
-/* .section-gap{
-   display:flex;
-  flex-direction: column;
-  gap:4rem;
-} */
+/* Hamburger button */
 
-main{
-  display:flex;
-  flex-direction: column;
-  gap:4rem;
-
+.menu-toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
 }
+
 
 .header-btn,.close-header-btn{
    background-color: var(--primary-color);
@@ -80,41 +101,36 @@ main{
    height:68px;
    border:none;
    border-radius:6px;
+   display:none;
 }
+
 
 img{
     width:118.15px;
     height:101px;
 }
 
-.nav-links{
-    display:flex;
-    gap:2em;
-}
 
-li{
-    list-style:none;
 
-}
-a{
-  color: var(--black-color);
-  
-}
 
+
+
+/* Change the CTA color to white(deferring it from black to white) */
 .CTA-btn a{
   color:white !important;
   text-decoration: none;
 }
 
-li a{
-    text-decoration: none;
+
+
+main{
+  display:flex;
+  flex-direction: column;
+  gap:4rem;
+
 }
 
 
-.nav-link:hover{
- opacity:.7;
- cursor:pointer;
-}
 
 /* Hero Section */
 .hero-section{
@@ -129,7 +145,6 @@ li a{
     gap:4em;
     border-radius:20px;
     margin:0 2em;
-    position: relative;
     overflow: visible; /* allow shape to escape */
     z-index: 1;
 }
@@ -526,7 +541,7 @@ color:var(--primary-color)
 
 /* Tablet Mode */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   /* .nav-links {
     display: none;
@@ -546,11 +561,42 @@ color:var(--primary-color)
     display:flex;
   } */
 
+  .nav-links{
+    flex-direction: column;
+    position:absolute;
+    top:5rem;
+    left:5rem;
+    background: #181816;
+    width:100%;
+    height:100%;
+  }
+
+  .nav-links a{
+    display:none;
+    width:100%;
+    text-align:left;
+    color:white;
+  }
+ /* Open the Nav Links(e.g Home,About,Services etc )*/
+  .nav-links.open a{
+    display:block;
+  }
+
+  
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .header-btn{
+    display:block;
+  }
+}
 @media (max-width: 768px) {
 
-  .nav-links {
+  /* .nav-links {
     position: fixed;
-    inset: 0; /* FULL SCREEN */
+    inset: 0; 
     background: black;
     list-style: none;
 
@@ -589,7 +635,7 @@ color:var(--primary-color)
   .close-header-btn {
     display: none;
   }
-}
+} */
 
 
 .hero-section{
