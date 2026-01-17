@@ -80,17 +80,132 @@ img{
     height:101px;
 }
 
-ul{
-    display:flex;
-    gap:2em;
+header{ 
+  background-color:var(--secondary-color);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position:sticky;
+  top:0;
+  height:80px;
+  padding:1.5em;
+  border-bottom: 2px solid var(--black-color);
+ z-index:200;
 }
 
-li{
-    list-style:none;
+/*Nav link that shows when the menu has been clicked on */
 
+.nav-link{
+  display: block;
+  color: white;
+  text-decoration: none;
 }
-a{
-  color: var(--black-color);
+
+
+.nav-link{
+  text-decoration:none ;
+  list-style: none;
+  color:var(--black-color);
+  
+}
+
+.nav-link:hover{
+  text-decoration: underline;
+  opacity:.7;
+  cursor:pointer;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:2em;
+}
+
+.hamburger-container{
+  display:none;
+}
+
+
+
+
+
+
+
+
+/* Tablet Mode */
+
+@media (max-width: 600px) {
+
+/*Nav link that shows when the menu has been clicked on */
+
+.nav-link{
+  display: block;
+  margin: 2rem 4rem;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+
+.nav-link{
+  text-decoration:none ;
+  list-style: none;
+  
+}
+
+.nav-link:hover{
+  text-decoration: underline;
+  opacity:.7;
+  cursor:pointer;
+}
+
+
+.hamburger-container{
+  display:block;
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 1.2em;
+  border: black solid 1px;
+  border-radius:6px;
+  background: white;
+  cursor: pointer;
+}
+.menu-open,.menu-close{
+  font-style: normal;
+  font-weight: 600;
+  font-size:1rem;
+}
+
+.hamburger-container:hover{
+  background:var(--black-color);
+  color:var(--primary-color);
+}
+.menu-close{
+  display:none;
+}
+
+/*Container for all the nav link(e.g home,about,services + [Menu])*/
+.nav-links{
+  flex-direction: column;
+  position:fixed;
+  transform:translateY(-150%);
+  translate:transform 0.2;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:99;
+  background: black;
+  color: orange;
+  list-style: none;
+  padding-top: 4rem;
+}
+
+.showMenu{
+  transform:translateY(0%);
+}
   
 }
 
@@ -99,15 +214,7 @@ a{
   text-decoration: none;
 }
 
-li a{
-    text-decoration: none;
-}
 
-
-.nav-link:hover{
- opacity:.7;
- cursor:pointer;
-}
 
 
 /* Hero Section */
