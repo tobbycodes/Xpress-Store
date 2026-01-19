@@ -32,6 +32,10 @@ const menuIcon = document.querySelector(".menu-open");
 const testImgContainer = document.querySelector('.test-img-container');
 const testImg = document.querySelector('.test-img');
 
+const whatsapp = document.getElementById("whatsapp-icon");
+const hero = document.querySelector("#hero");
+const footer = document.querySelector("#footer");
+
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
@@ -60,3 +64,38 @@ function handleCarouselMove(positive=true){
   ?testImgContainer.scrollLeft + slideWidth
   :testImgContainer.scrollLeft - slideWidth;
 }
+
+
+/* Whatsapp Javascript Code*/
+
+ if (!whatsapp || !hero || !footer) return;
+
+  const offset = 32;
+
+  const onScroll = () => {
+    const scrollY = window.scrollY;
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    const footerTop = footer.offsetTop;
+
+    // Start following after hero
+    if (scrollY >= heroBottom - window.innerHeight) {
+      whatsapp.classList.add("is-fixed");
+    } else {
+      whatsapp.classList.remove("is-fixed");
+    }
+
+    // Stop at footer
+    if (scrollY + window.innerHeight >= footerTop + offset) {
+      whatsapp.classList.remove("is-fixed");
+      whatsapp.classList.add("is-stopped");
+
+      whatsapp.style.top = `${
+        footerTop - whatsapp.offsetHeight - offset
+      }px`;
+    } else {
+      whatsapp.classList.remove("is-stopped");
+      whatsapp.style.top = "";
+    }
+  };
+
+  window.addEventListener("scroll", onScroll);
