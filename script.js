@@ -1,5 +1,3 @@
-
-
 /*Test 1 Hamburger Menu Javascript Code*/
 // const navLinks = document.querySelector('.nav-links');
 // const navLinkItems = document.querySelectorAll('.nav-link');
@@ -24,11 +22,15 @@
 // });
 
 
+//Menu Hamburger
 const menu = document.querySelector(".nav-links");
 const menuItems = document.querySelectorAll(".nav-link");
 const hamburger = document.querySelector(".hamburger-container");
 const closeIcon= document.querySelector(".menu-close");
 const menuIcon = document.querySelector(".menu-open");
+
+const testImgContainer = document.querySelector('.test-img-container');
+const testImg = document.querySelector('.test-img');
 
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
@@ -50,4 +52,11 @@ menuItems.forEach(
   }
 )
 
+// document.querySelector('.prev-arrow').addEventListener('click',handleCarouselMove(false))
 
+function handleCarouselMove(positive=true){
+  const slideWidth = testImg.clientWidth;
+  testImgContainer.scrollLeft = positive
+  ?testImgContainer.scrollLeft + slideWidth
+  :testImgContainer.scrollLeft - slideWidth;
+}
