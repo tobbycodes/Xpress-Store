@@ -189,7 +189,7 @@ main{
     position:relative;
     background:var(--secondary-color);
     border:2px solid var(--black-color);
-    height:100%;
+    height:100vh;
     padding:4em;
     display:flex;
     justify-content: space-between;
@@ -281,15 +281,58 @@ main{
 
 .hero-img{
   width: 100%;
+  max-width:400px;
   height: 100%;
   object-fit: cover;
 
 }
 
+/* Group Section + Whatsapp */
+.section {
+  min-height: 80vh;
+  padding: 6rem;
+}
 
 
+/* WHATSAPP ICON */
+.whatsapp-float {
+  position: absolute; /* KEY */
+  top: calc(100vh - 5px); /* starts in hero */
+  right: 32px;
+
+  width: 56px;
+  height: 56px;
+
+  background: #25d366;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+
+  transition: transform 0.2s ease;
+}
+
+/* When following user */
+.whatsapp-float.is-fixed {
+  position: fixed;
+  top: auto;
+  bottom: 32px;
+}
+
+/* When stopped at footer */
+.whatsapp-float.is-stopped {
+  position: absolute;
+}
 
 
+.whatsapp-float:hover{
+transform: scale(1.2);
+
+}
 
 
 /* Social-Proof Section */
