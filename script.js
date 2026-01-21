@@ -12,6 +12,19 @@ const whatsapp = document.getElementById("whatsapp-icon");
 const hero = document.querySelector("#hero");
 const footer = document.querySelector("#footer");
 
+//Restrict Users From Submitting If Values Are Not Entered
+const form = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const requiredFormElements = document.querySelectorAll('input:not([type="submit"])','textarea');
+
+form.addEventListener('input',()=>{
+  const allFilled = Array.from(requiredFormElements).every(formElement =>{
+    return formElement.value.trim() !== ''
+  })
+  submitBtn.disabled = !allFilled;
+  
+})
+
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
@@ -80,13 +93,5 @@ function initWhatsappScroll() {
 initWhatsappScroll();
 
 
-//Restrict Users From Submitting If Values Are Not Entered
-const form = document.getElementById("contact-form");
-const submitButton = document.getElementById("submit-btn");
 
-form.addEventListener("input", function() {
-  const allFilled = Array.from(form.elements).every(input => {
-    return input.type === "submit" || input.value.trim() !== "";
-  });
-  submitButton.disabled = !allFilled;
-});
+
