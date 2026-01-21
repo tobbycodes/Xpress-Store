@@ -1,27 +1,3 @@
-/*Test 1 Hamburger Menu Javascript Code*/
-// const navLinks = document.querySelector('.nav-links');
-// const navLinkItems = document.querySelectorAll('.nav-link');
-// const menuBtn = document.querySelector('.header-btn');
-// const closeBtn = document.querySelector('.close-header-btn');
-
-// function toggleMenu() {
-//   navLinks.classList.toggle('showMenu');
-//   menuBtn.style.display = navLinks.classList.contains('showMenu') ? 'none' : 'block';
-//   closeBtn.style.display = navLinks.classList.contains('showMenu') ? 'block' : 'none';
-// }
-
-// menuBtn.addEventListener('click', toggleMenu);
-// closeBtn.addEventListener('click', toggleMenu);
-
-// navLinkItems.forEach(link => {
-//   link.addEventListener('click', () => {
-//     navLinks.classList.remove('showMenu');
-//     menuBtn.style.display = 'block';
-//     closeBtn.style.display = 'none';
-//   });
-// });
-
-
 //Menu Hamburger
 const menu = document.querySelector(".nav-links");
 const menuItems = document.querySelectorAll(".nav-link");
@@ -66,9 +42,9 @@ function handleCarouselMove(positive=true){
 }
 
 
-/* Whatsapp Javascript Code*/
-
- if (!whatsapp || !hero || !footer) return;
+/* Whatsapp Javascript Code */
+function initWhatsappScroll() {
+  if (!whatsapp || !hero || !footer) return;
 
   const offset = 32;
 
@@ -78,20 +54,19 @@ function handleCarouselMove(positive=true){
     const footerTop = footer.offsetTop;
 
     // Start following after hero
-    if (scrollY >= heroBottom - window.innerHeight) {
+    if (scrollY + window.innerHeight >= heroBottom) {
       whatsapp.classList.add("is-fixed");
     } else {
       whatsapp.classList.remove("is-fixed");
     }
 
     // Stop at footer
-    if (scrollY + window.innerHeight >= footerTop + offset) {
+    if (scrollY + window.innerHeight >= footerTop - offset) {
       whatsapp.classList.remove("is-fixed");
       whatsapp.classList.add("is-stopped");
 
-      whatsapp.style.top = `${
-        footerTop - whatsapp.offsetHeight - offset
-      }px`;
+      whatsapp.style.top =
+        footerTop - whatsapp.offsetHeight - offset + "px";
     } else {
       whatsapp.classList.remove("is-stopped");
       whatsapp.style.top = "";
@@ -99,3 +74,19 @@ function handleCarouselMove(positive=true){
   };
 
   window.addEventListener("scroll", onScroll);
+}
+
+// ✅ Call it
+initWhatsappScroll();
+
+
+//Restrict Users From Submitting If Values Are Not Entered
+const form = document.getElementById("contact-form");
+const submitButton = document.getElementById("submit-btn");
+
+form.addEventListener("input", function() {
+  const allFilled = Array.from(form.elements).every(input => {
+    return input.type === "submit" || input.value.trim() !== "";
+  });
+  submitButton.disabled = !allFilled;
+});

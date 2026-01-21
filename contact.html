@@ -27,7 +27,7 @@
         <span><i class="home-icon"></i>Home/<span>Contact</span></span>
         <div class="contact-container">
           <img class="contact-img" src="Xpress Images/Contact/Contact-Hero-Image.png" alt="This is the logo that represent xpress services,provides the best products for our clients">
-          <form>
+          <form id="contact-form">
             <h1>Get In Contact With Us</h1>
             <label for="name">Name</label>
             <input type="text" class="name-input" id="name" placeholder="Jane Doe" required>
@@ -37,7 +37,7 @@
 
             <label for="number">Leave Your Request</label>
             <textarea></textarea>
-            <button class="contact-btn">SUBMIT</button>
+            <button class="contact-btn" id="submit-btn">SUBMIT</button>
           </form>
         </div>
         
@@ -47,28 +47,29 @@
   
    
   
-    <footer>
-      <div class="footer-first-section"> 
-        <p class="footer-subtitle-text">Message us or leave a request on your desired souvenir. We are ready to help deliver your souvenir with ease.</p>
-        <h2 class="footer-heading-text">Let's Create Memories</h2>
-        <div class="footer-input-container" >
-          <input class="footer-input" type="number"  name="number" placeholder="Your Phone Number">
-          <button class="footer-btn">Contact Us</button>
-        </div>
-        <div class="footer-socials">    
-          <span><a href="">INSTAGRAM</a></span>
-          <span><a href="">WHATSAPP</a></span>
-        </div>
+  <footer id="footer">
+    <div class="footer-first-section"> 
+      <p class="footer-subtitle-text">Message us or leave a request on your desired souvenir. We are ready to help deliver your souvenir with ease.</p>
+      <h2 class="footer-heading-text">Let's Create Memories</h2>
+      <div class="footer-input-container">
+        <input class="footer-input" type="number"  name="number" placeholder="Your Phone Number">
+        <button class="footer-btn"><a href="https://api.whatsapp.com/send/?phone=7068924477&text&type=phone_number&app_absent=0">Contact Us</a></button>
       </div>
-      <p class="footer-display-text">XPRESS STORE</p>
-      <div class="legacy-copy">
-        <p>©2025. All rights reserved.</p>
-        <div class="right-legacy-copy">
-          <p>Terms of Service</p>
-          <p>Privacy Policy</p>
-        </div>  
+      <div class="footer-socials">    
+        <span><a href="https://www.instagram.com/x_press.store/" target="_blank">INSTAGRAM</a></span>
+        <span><a href="https://www.threads.com/@x_press.store/" target="_blank">THREADS</a></span>
+        <span><a href="https://api.whatsapp.com/send/?phone=7068924477&text&type=phone_number&app_absent=0" target="_blank">WHATSAPP</a></span>
       </div>
-    </footer>
+    </div>
+    <p class="footer-display-text">XPRESS STORE</p>
+    <div class="legacy-copy">
+      <p>©2025. All rights reserved.</p>
+      <div class="right-legacy-copy">
+        <p>Terms of Service</p>
+        <p>Privacy Policy</p>
+      </div>  
+    </div>
+  </footer>
    
 </body>
 <script src="script.js"></script>

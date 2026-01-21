@@ -39,11 +39,9 @@
          </div>
       </section>
       
-     
 
       <section class="about-section about-text-container">
         <div class="about-ceo-section">
-          
           <div class="about-top-container">
             <span class="about-subtitle-text">Adewole Tolulope</span>
             <h2 class="about-heading-text">CEO,Xpress Store</h2>
@@ -85,49 +83,58 @@
                <h2 class="about-heading-text">CTO,Xpress Store</h2>
             </div>
           
-           <p class="about-cto-down">The technical side of xpress store is for the clients to get their souvenirs accurately.We know communication is the most important part  of business for you, and we are always ready 24/7 to respond to any request.p>
+           <p class="about-cto-down">The technical side of xpress store is for the clients to get their souvenirs accurately.We know communication is the most important part  of business for you, and we are always ready 24/7 to respond to any request.</p>
           </div>
           <img src="xpress images/About/About-CTO-Image..png" Class="about-img cto-img" alt="a picture of our chief financial officer at xpress store."/>
         </div>
       </section>
 
       
-      <section class="testimonial-section">
+    <section class="section testimonial-section">
+      <img  class="circle-decor-up" src="xpress images/Homepage/Circle-Decor-Up.svg" alt="circle decoration that add beauty to the appearance of the website" />
+      <img class="circle-decor-down" src="xpress images/Homepage/Circle-Decor-Down.svg.svg" alt="alt="circle decoration that add beauty to the appearance of the website"/>
         <h2 class="h2-text testimonial-heading-text">What Our Clients Says About Us</h2>
-        <div class="img+arrow-container">
-          <i class="arrow-right"></i>
-            <div class="test-img-container">
-              <img class="test-img img1" src="xpress images/Homepage/testimonial-img1.png" alt="Back-icon"/>
-              <img class="test-img img2" src="xpress images/Homepage/testimonial-img2.png" alt=""/>
-              <img class="test-img img3" src="xpress images/Homepage/testimonial-img3.png" alt=""/>
-            </div>
-          <i class="arrow-left"></i>
+        <div class="img_arrow-container">
+
+          <img class="test-arrow prev-arrow" onclick="handleCarouselMove(false)" src="xpress images/Gallery/back-left-arrow-square-button-outline.png" alt="A right arrow moving the images to the right" />
+          <img class="test-arrow next-arrow" onclick="handleCarouselMove()" src="xpress images/Gallery/right-arrow-square-button-symbol.png" alt="A right arrow moving the images to the right"/>
+          
+          <div class="test-img-container" dir="ltr">
+            <img class="test-img img1" src="xpress images/Homepage/testimonial-img1.png" alt="Back-icon"/>
+            <img class="test-img img2" src="xpress images/Homepage/testimonial-img2.png" alt=""/>
+            <img class="test-img img3" src="xpress images/Homepage/testimonial-img3.png" alt=""/>
+            <img class="test-img img4" src="xpress images/Homepage/testimonial-img4.png" alt=""/>
+            <img class="test-img img5" src="xpress images/Homepage/testimonial-img5.png" alt=""/>
+            <img class="test-img img6" src="xpress images/Homepage/testimonial-img6.png" alt=""/>  
+          </div>
+
         </div>
-      </section>
+    </section>
     </main>
   
-    <footer>
-      <div class="footer-first-section"> 
-        <p class="footer-subtitle-text">Message us or leave a request on your desired souvenir. We are ready to help deliver your souvenir with ease.</p>
-        <h2 class="footer-heading-text">Let's Create Memories</h2>
-        <div class="footer-input-container" >
-          <input class="footer-input" type="number"  name="number" placeholder="Your Phone Number">
-          <button class="footer-btn">Contact Us</button>
-        </div>
-        <div class="footer-socials">    
-          <span><a href="">INSTAGRAM</a></span>
-          <span><a href="">WHATSAPP</a></span>
-        </div>
+    <footer id="footer">
+    <div class="footer-first-section"> 
+      <p class="footer-subtitle-text">Message us or leave a request on your desired souvenir. We are ready to help deliver your souvenir with ease.</p>
+      <h2 class="footer-heading-text">Let's Create Memories</h2>
+      <div class="footer-input-container">
+        <input class="footer-input" type="number"  name="number" placeholder="Your Phone Number">
+        <button class="footer-btn"><a href="https://api.whatsapp.com/send/?phone=7068924477&text&type=phone_number&app_absent=0">Contact Us</a></button>
       </div>
-      <p class="footer-display-text">XPRESS STORE</p>
-      <div class="legacy-copy">
-        <p>©2025. All rights reserved.</p>
-        <div class="right-legacy-copy">
-          <p>Terms of Service</p>
-          <p>Privacy Policy</p>
-        </div>  
+      <div class="footer-socials">    
+        <span><a href="https://www.instagram.com/x_press.store/" target="_blank">INSTAGRAM</a></span>
+        <span><a href="https://www.threads.com/@x_press.store/" target="_blank">THREADS</a></span>
+        <span><a href="https://api.whatsapp.com/send/?phone=7068924477&text&type=phone_number&app_absent=0" target="_blank">WHATSAPP</a></span>
       </div>
-    </footer>
+    </div>
+    <p class="footer-display-text">XPRESS STORE</p>
+    <div class="legacy-copy">
+      <p>©2025. All rights reserved.</p>
+      <div class="right-legacy-copy">
+        <p>Terms of Service</p>
+        <p>Privacy Policy</p>
+      </div>  
+    </div>
+  </footer>
    
 </body>
 <script src="script.js"></script>
