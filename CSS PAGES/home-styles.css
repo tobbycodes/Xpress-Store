@@ -631,7 +631,7 @@ button:hover{
 .carousel {
   position: relative;
   width: 100%;
-  overflow: hidden;
+
 }
 
 /* CAROUSEL-CONTAINER */
@@ -642,6 +642,8 @@ button:hover{
 /* IMG-CONTAINER*/
 .test-img-container {
   display: flex;
+  width:100%;
+  gap:0.5em;
   transition: transform 400ms ease;
 }
 
@@ -650,6 +652,7 @@ button:hover{
   flex: 0 0 100%;
   max-width: 100%;
   height:auto;
+  object-fit:cover;
 }
 
 /* ARROWS */
