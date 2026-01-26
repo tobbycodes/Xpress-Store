@@ -536,7 +536,7 @@ button:hover{
 }
 
 /* Testimonial Scroll Animation */
-
+/* 
 .img_arrow-container{
   display:flex;
   justify-content: center;
@@ -575,10 +575,7 @@ button:hover{
 }
 
 .test-img-container{
-  /* display:flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow:visible; */
+
   display:flex;
   align-items: start;
   gap:0.5em;
@@ -629,7 +626,68 @@ button:hover{
   .test-img {
     flex: 1 0 90%;
   }
+} */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
+
+/* CAROUSEL-CONTAINER */
+.carousel-container{
+  overflow: hidden;
+}
+
+/* IMG-CONTAINER*/
+.test-img-container {
+  display: flex;
+  transition: transform 400ms ease;
+}
+
+/* SLIDES */
+.test-img {
+  flex: 0 0 100%;
+  max-width: 100%;
+  height:auto;
+}
+
+/* ARROWS */
+.test-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-arrow { left: 10px; }
+.next-arrow { right: 10px; }
+
+/* DOTS */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.carousel-dots button.active {
+  background: var(--secondary-color);
+}
+
 
 /* Footer Section */
 

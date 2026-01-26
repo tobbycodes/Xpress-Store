@@ -5,8 +5,8 @@ const hamburger = document.querySelector(".hamburger-container");
 const closeIcon= document.querySelector(".menu-close");
 const menuIcon = document.querySelector(".menu-open");
 
-const testImgContainer = document.querySelector('.test-img-container');
-const testImg = document.querySelector('.test-img');
+// const testImgContainer = document.querySelector('.test-img-container');
+// const testImg = document.querySelector('.test-img');
 
 const whatsapp = document.getElementById("whatsapp-icon");
 const hero = document.querySelector("#hero");
@@ -25,6 +25,7 @@ form.addEventListener('input',()=>{
   
 })
 
+//Responsive Menu Toggle Function
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
@@ -45,14 +46,57 @@ menuItems.forEach(
   }
 )
 
-// document.querySelector('.prev-arrow').addEventListener('click',handleCarouselMove(false))
 
-function handleCarouselMove(positive=true){
-  const slideWidth = testImg.clientWidth;
-  testImgContainer.scrollLeft = positive
-  ?testImgContainer.scrollLeft + slideWidth
-  :testImgContainer.scrollLeft - slideWidth;
+
+// function handleCarouselMove(positive=true){
+//   const slideWidth = testImg.clientWidth;
+//   testImgContainer.scrollLeft = positive
+//   ?testImgContainer.scrollLeft + slideWidth
+//   :testImgContainer.scrollLeft - slideWidth;
+// }
+
+//Testimonial Carousel Imae Slider
+
+const track = document.querySelector('.carousel-img-container');
+const slides = Array.from(track.children);
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dotsContainer = document.querySelector('.carousel-dots');
+
+let currentIndex = 0;
+
+/* CREATE DOTS */
+slides.forEach((_, index) => {
+  const dot = document.createElement('button');
+  if (index === 0) dot.classList.add('active');
+  dotsContainer.appendChild(dot);
+
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+  });
+});
+
+const dots = Array.from(dotsContainer.children);
+
+/* UPDATE SLIDER */
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentIndex].classList.add('active');
 }
+
+/* ARROWS */
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel();
+});
 
 
 /* Whatsapp Javascript Code */
