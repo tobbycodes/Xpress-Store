@@ -28,8 +28,10 @@ const submitBtn = document.getElementById('submit-btn');
 const requiredFormElements = document.querySelectorAll('input:not([type="submit"])','textarea');
 
 //Gallery Image Elements
-let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const slide = document.querySelector('.slide');
+//Disable Submit Button Initially
 // form.addEventListener('input',()=>{
 //   const allFilled = Array.from(requiredFormElements).every(formElement =>{
 //     return formElement.value.trim() !== ''
@@ -192,12 +194,45 @@ updateDots();
 //Gallery Image Animation
 
 
-next.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').appendChild(items[0])
-})
+// Next button - move first item to end
+next.addEventListener('click', function() {
+    const items = document.querySelectorAll('.item');
+    slide.appendChild(items[0]);
+});
 
-prev.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
-})
+// Previous button - move last item to beginning
+prev.addEventListener('click', function() {
+    const items = document.querySelectorAll('.item');
+    slide.prepend(items[items.length - 1]);
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight') {
+        next.click();
+    } else if (e.key === 'ArrowLeft') {
+        prev.click();
+    }
+});
+
+// Touch swipe support
+let touchStartX = 0;
+let touchEndX = 0;
+
+slide.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+slide.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    if (touchEndX < touchStartX - 50) {
+        next.click();
+    }
+    if (touchEndX > touchStartX + 50) {
+        prev.click();
+    }
+}

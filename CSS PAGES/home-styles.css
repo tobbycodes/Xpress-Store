@@ -87,9 +87,6 @@ header{
 
 
 
-
-
-
 /* Tablet Mode */
 
 @media (max-width: 600px) {
@@ -166,6 +163,7 @@ header{
 }
   
 }
+
 /* Change the CTA color to white(deferring it from black to white) */
 .CTA-btn a{
   color:white !important;
