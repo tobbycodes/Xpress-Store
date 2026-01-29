@@ -220,7 +220,7 @@ header{
     background:var(--secondary-color);
     border:2px solid var(--black-color);
     height:100vh;
-    max-height:600px;
+    max-height:400px;
     display:flex;
     justify-content: center;
     align-items:center;
@@ -491,7 +491,8 @@ footer{
 }
 .footer-btn a{
   text-decoration: none;
-  
+   font-weight: 600;
+  letter-spacing: 1.2%;
 }
 .footer-btn{
   width:100px;
