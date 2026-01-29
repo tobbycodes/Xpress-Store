@@ -60,16 +60,6 @@ main{
   gap:2.5em;
 }
 
-.header-btn{
-   background-color: var(--primary-color);
-   font-size:1.5rem;
-   color:var(--black-color);
-   padding:1rem;
-   width:99px;
-   height:68px;
-   border:none;
-   border-radius:6px;
-}
 
 img{
     width:90px;
@@ -122,8 +112,9 @@ header{
 }
 
 
-/* Tablet Mode */
+/* Tablet Mode For Nav*/
 
+@media (max-width: 600px) {
 
 /*Nav link that shows when the menu has been clicked on */
 
@@ -187,19 +178,23 @@ header{
   right:0;
   z-index:99;
   background: black;
+  color: orange;
   list-style: none;
   padding-top: 4rem;
+  gap:0;
 }
 
 .showMenu{
   transform:translateY(0%);
 }
   
+}
 
 .CTA-btn a{
   color:white !important;
   text-decoration: none;
 }
+
 
 
 /* Hero Section */
