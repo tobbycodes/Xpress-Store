@@ -58,7 +58,7 @@ main{
   display:flex;
   flex-direction: column;
   width:100%;
-  gap:4rem;
+  gap:2.5rem;
 }
 
 .header-btn{
@@ -119,7 +119,7 @@ li a{
     flex-direction: column;
     justify-content: space-between;
     align-items:start;
-    gap:em;
+    gap:2.5em;
     
 }
 
@@ -344,6 +344,7 @@ color:var(--primary-color)
 
  .contact-section{
     padding:1.5em;
+    gap:1.5em;
  }
  .contact-img{
    width:100%;
